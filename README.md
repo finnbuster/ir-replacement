@@ -1,5 +1,12 @@
 # InnerRange Inception
 
+> **Fork note:** this is a fork of [sebr/inception-home-assistant](https://github.com/sebr/inception-home-assistant)
+> that adds **username/password login** for Inception firmware without User API Tokens.
+> In the setup form, leave **Token** blank and enter the web login username and password
+> of a user with the `REST Web API User` web page profile. The integration logs in,
+> keeps the session alive and logs in again if it expires. The host can be a local
+> address or SkyTunnel, e.g. `https://skytunnel.com.au/inception/<serial>`.
+
 _Integration to integrate with [Inner Range Inception](https://www.innerrange.com/products/controllers/996300) security systems._
 
 If this integration has been useful to you, please consider chipping in and buying me a coffee!
