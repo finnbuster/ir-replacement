@@ -193,7 +193,7 @@ class TestConfigFlowCredentials:
             "custom_components.inception.config_flow.InceptionFlowHandler._test_credentials"
         ) as test_credentials:
             result = await self._submit(
-                hass, {"name": "TH", "host": "h.test", "username": "ha"}
+                hass, {"name": "Test", "host": "h.test", "username": "ha"}
             )
 
         assert result["type"] is FlowResultType.FORM
@@ -208,7 +208,7 @@ class TestConfigFlowCredentials:
             result = await self._submit(
                 hass,
                 {
-                    "name": "TH",
+                    "name": "Test",
                     "host": "https://skytunnel.com.au/inception/IN1",
                     "username": "ha",
                     "password": "secret",
@@ -217,7 +217,7 @@ class TestConfigFlowCredentials:
 
         assert result["type"] is FlowResultType.CREATE_ENTRY
         assert result["data"] == {
-            "name": "TH",
+            "name": "Test",
             "host": "https://skytunnel.com.au/inception/IN1",
             "username": "ha",
             "password": "secret",
@@ -237,7 +237,7 @@ class TestConfigFlowCredentials:
             result = await self._submit(
                 hass,
                 {
-                    "name": "TH",
+                    "name": "Test",
                     "host": "h.test",
                     "token": "t",
                     "username": "ha",
@@ -246,4 +246,4 @@ class TestConfigFlowCredentials:
             )
 
         assert result["type"] is FlowResultType.CREATE_ENTRY
-        assert result["data"] == {"name": "TH", "host": "http://h.test", "token": "t"}
+        assert result["data"] == {"name": "Test", "host": "http://h.test", "token": "t"}
